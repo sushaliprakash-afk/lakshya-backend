@@ -1,11 +1,15 @@
-# lakshya-backend
-# Lakshya Backend
+# Lakshya Backend (Azure Functions + Cosmos DB)
 
-This is the backend API for Lakshya, a civic-tech platform built with Node.js and MongoDB.
+This backend handles pledge submissions for Lakshya using Azure Functions and Cosmos DB.
 
-## Endpoints
-- `POST /api/pledge`: Submit a pledge
-- `GET /api/leaderboard`: View top contributors
+## API Endpoint
 
-## Deployment
-Hosted on Azure App Service using GitHub Actions.
+**POST** `/api/submitPledge`
+
+### Request Body
+```json
+{
+  "name": "Sushali",
+  "email": "sushali@example.com",
+  "message": "I pledge to support civic tech!"
+}
