@@ -36,3 +36,21 @@ This repository contains the serverless backend logic for **Lakshya**, India’s
 ---
 
 ## 📁 Folder Structure
+├── api/
+│   ├── submitPledge/
+│   ├── metrics/
+│   ├── leaderboard/
+│   ├── pledges/
+│   └── notify/
+├── shared/
+│   └── utils/
+├── host.json
+├── local.settings.json
+└── README.md
+
+🚀 Sponsor-Ready Features
+- Real-Time Metrics: Showcase civic impact with live dashboards
+- Gamified Engagement: Karma points and leaderboards drive participation
+- Automated Outreach: Logic Apps notify sponsors instantly
+- Scalable & Secure: Azure-native stack ensures reliability and privacy
+
