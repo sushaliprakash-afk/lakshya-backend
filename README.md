@@ -1,15 +1,38 @@
-# Lakshya Backend (Azure Functions + Cosmos DB)
+# 🛠️ Lakshya Backend – Azure-Powered Civic-Tech APIs
 
-This backend handles pledge submissions for Lakshya using Azure Functions and Cosmos DB.
+This repository contains the serverless backend logic for **Lakshya**, India’s gamified civic engagement platform. Built with Azure Functions and designed for scale, the backend handles pledge submissions, karma tracking, leaderboard generation, and sponsor notifications — all in real time.
 
-## API Endpoint
+## 🔗 Frontend Repository  
+👉 [Lakshya Frontend](https://github.com/sushaliprakash-afk/lakshya)
 
-**POST** `/api/submitPledge`
+## 🌐 Live Frontend Demo  
+🔗 [Visit Lakshya](https://sushaliprakash-afk.github.io/lakshya)
 
-### Request Body
-```json
-{
-  "name": "Sushali",
-  "email": "sushali@example.com",
-  "message": "I pledge to support civic tech!"
-}
+---
+
+## 🧠 Azure Architecture
+
+| Service              | Purpose                                                  |
+|----------------------|----------------------------------------------------------|
+| **Azure Functions**  | Stateless API endpoints for frontend integration         |
+| **Cosmos DB**        | Stores pledges, karma points, and user metadata          |
+| **Logic Apps**       | Automates sponsor notifications and reward triggers      |
+| **Notification Hubs**| Sends real-time updates to users                         |
+| **Azure AD B2C**     | (Optional) Secures user identity for personalized access |
+| **Machine Learning** | (Planned) Analyzes pledge trends and engagement patterns |
+
+---
+
+## 📦 API Endpoints
+
+| Endpoint               | Method | Description                                      |
+|------------------------|--------|--------------------------------------------------|
+| `/api/submitPledge`    | POST   | Accepts pledge data from frontend form           |
+| `/api/metrics`         | GET    | Returns real-time impact stats (karma, users)    |
+| `/api/leaderboard`     | GET    | Returns top Karma earners                        |
+| `/api/pledges`         | GET    | Returns recent pledges for Community Wall        |
+| `/api/notify`          | POST   | Triggers sponsor notification via Logic Apps     |
+
+---
+
+## 📁 Folder Structure
